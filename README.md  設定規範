@@ -1,0 +1,27 @@
+Plaintext
+factor-mvp/
+├── AGENTS.md                   # 規範 AI 行為與因子規則 (第2週開場規定)
+├── requirements.txt            # 專案依賴套件 (pandas, numpy, behave, pytest 等)
+├── README.md                   # 說明文檔與一行重現指令
+├── requirements/               # 使用者故事文件 (US-101 ~ US-103)
+│   ├── US-101_pit_data.md
+│   ├── US-102_factors.md
+│   └── US-103_backtest.md
+├── features/                   # BDD Gherkin 情境規格
+│   ├── pit_data_alignment.feature
+│   ├── factor_processing.feature
+│   └── backtest_costs.feature
+├── docs/                       # 架構決策紀錄 (ADR)
+│   └── ADR-001_pipeline_design.md
+├── app/                        # 核心業務程式碼 (所有 .py 檔放這裡)
+│   ├── __init__.py
+│   ├── data.py
+│   ├── factors.py
+│   ├── signals.py
+│   ├── portfolio.py
+│   ├── backtest.py
+│   └── runner.py
+├── features/steps/             # Behave 測試步驟實作
+│   └── test_steps.py
+└── ai_log/                     # AI 協作日誌 (上記錄犯過的錯與提示词)
+    └── prompt_history.md
